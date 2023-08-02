@@ -1,2 +1,1 @@
-from collections import Counter
-print((Counter("ab") & Counter("aa"))==Counter("ab"))
+print(-(-5//2))
