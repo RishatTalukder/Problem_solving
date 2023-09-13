@@ -147,6 +147,49 @@ class linkedList:
             temp.next = new_node  # setting the next value of the node to the new node
             self.length += 1
             return True
+    
+
+    #removing a item from the linked list
+    def remove(self,index):
+        if index < 0 or index >= self.length: #checking if the index is out of range
+            return False 
+        
+        if index == 0:
+            return self.pop_first() # removing using the pop method
+        
+        if index == self.length -1:
+            return self.pop() #removing using the pop method 
+            
+        else:
+            pre = self.get(index - 1) #getting the previous node in the index
+            temp = pre.next # setting temp as the next value
+            pre.next = temp.next # setting the next value of the previous node to the next value of the temp
+            temp = None # now temp points to nothing
+            self.length -= 1 #decreasing the length
+            return True
+        
+    
+
+    #finally reversing a linked list
+    def reverse(self):
+        """step 1 :
+        swapping the head and tail"""
+        temp = self.head
+        self.head = self.tail  
+        self.tail = temp 
+        
+        """step 2:
+        taking three variables to iterate through the linked list
+        temp,before,after"""
+        before = None # previous node
+
+        for _ in range(self.length):
+            after = temp.next
+            temp.next = before
+            before = temp 
+            temp = after
+
+
 
 
 if __name__ == "__main__":
@@ -158,6 +201,6 @@ if __name__ == "__main__":
     linked_list.append(3)
     linked_list.append(4)
     linked_list.append(5)
-    print(linked_list.length)
-    print(linked_list.insert(5, 56))
+
+    linked_list.reverse()
     linked_list.print_list()
