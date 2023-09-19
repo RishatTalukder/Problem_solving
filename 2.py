@@ -5,7 +5,7 @@
 #         self.next = next
 class Solution:
     def addTwoNumbers(self, l1: ListNode, l2: ListNode) -> ListNode:
-                """
+        """
                 Adds two numbers represented as linked lists.
         
                 Args:
@@ -37,7 +37,7 @@ class Solution:
                 Complexity Analysis:
                     - Time Complexity: O(max(n, m)), where n and m are the lengths of the two input linked lists.
                     - Space Complexity: O(max(n, m)), as the resulting linked list can have a maximum length of max(n, m) + 1.
-                """
+                """        
         
         dummyHead = ListNode(0)
         tail = dummyHead
