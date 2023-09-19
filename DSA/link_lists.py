@@ -5,13 +5,13 @@ Full Linked list using Python and every line is explained with a comment after t
 
 # Node class to create new node
 class Node:
-    def __init__(self, Value) -> None:  # constructor to create new node
+    def __init__(self, Value=0) -> None:  # constructor to create new node
         self.value = Value  # value of the node
         self.next = None  # points to the next node
 
 
 # linked list class to execute all the functions and methods of a linked list
-class linkedList:
+class LinkedList:
     def __init__(self, value):  # constructor to create a linked list
         new_node = Node(value)  # create a new node
         # as the linkde list was empty the head and tail points to the new node
@@ -147,60 +147,51 @@ class linkedList:
             temp.next = new_node  # setting the next value of the node to the new node
             self.length += 1
             return True
-    
 
-    #removing a item from the linked list
-    def remove(self,index):
-        if index < 0 or index >= self.length: #checking if the index is out of range
-            return False 
-        
+    # removing a item from the linked list
+    def remove(self, index):
+        if index < 0 or index >= self.length:  # checking if the index is out of range
+            return False
+
         if index == 0:
-            return self.pop_first() # removing using the pop method
-        
-        if index == self.length -1:
-            return self.pop() #removing using the pop method 
-            
-        else:
-            pre = self.get(index - 1) #getting the previous node in the index
-            temp = pre.next # setting temp as the next value
-            pre.next = temp.next # setting the next value of the previous node to the next value of the temp
-            temp = None # now temp points to nothing
-            self.length -= 1 #decreasing the length
-            return True
-        
-    
+            return self.pop_first()  # removing using the pop method
 
-    #finally reversing a linked list
+        if index == self.length - 1:
+            return self.pop()  # removing using the pop method
+
+        else:
+            pre = self.get(index - 1)  # getting the previous node in the index
+            temp = pre.next  # setting temp as the next value
+            pre.next = (
+                temp.next
+            )  # setting the next value of the previous node to the next value of the temp
+            temp = None  # now temp points to nothing
+            self.length -= 1  # decreasing the length
+            return True
+
+    # finally reversing a linked list
     def reverse(self):
         """step 1 :
         swapping the head and tail"""
         temp = self.head
-        self.head = self.tail  
-        self.tail = temp 
-        
+        self.head = self.tail
+        self.tail = temp
+
         """step 2:
         taking three variables to iterate through the linked list
         temp,before,after"""
-        before = None # previous node
+        before = None  # previous node
 
         for _ in range(self.length):
             after = temp.next
             temp.next = before
-            before = temp 
+            before = temp
             temp = after
-
-
 
 
 if __name__ == "__main__":
     # creating the linked list
-    linked_list = linkedList(1)
-
-    # adding four more elements to the linked list
-    linked_list.append(2)
-    linked_list.append(3)
-    linked_list.append(4)
-    linked_list.append(5)
-
-    linked_list.reverse()
-    linked_list.print_list()
+    linked_list1 = LinkedList(2)
+    linked_list1.append(4)
+    linked_list1.append(3)
+    temp = linked_list1.head

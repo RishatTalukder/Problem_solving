@@ -1,14 +1,5 @@
-# s = " hello    world "
+from collections import deque
 
-# new_s = s.split(' ')
-# new_s = new_s[::-1]
+s = deque()
 
-# for i in new_s:
-#     if i:
-#         print(i,end=" ")
-#     else:
-#         pass
-
-max_val =-24//10
-
-print(max_val)
+print(s)
