@@ -193,5 +193,7 @@ if __name__ == "__main__":
     # creating the linked list
     linked_list1 = LinkedList(2)
     linked_list1.append(4)
-    linked_list1.append(3)
-    temp = linked_list1.head
+    linked_list1.append(6)
+    linked_list1.insert(1, 23)
+
+    print(linked_list1.print_list())
