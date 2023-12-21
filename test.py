@@ -1,7 +1,5 @@
-a = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
-for i in a:
-    print(i, end=" ")
+a = [[1, 9], [2, 4], [4, 7], [6, 8]]
 
-print(*[i for i in a])
+a.sort()
 
-print(*a, sep="\n")
+print(a)
