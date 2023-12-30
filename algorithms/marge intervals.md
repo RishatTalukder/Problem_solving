@@ -38,3 +38,8 @@ def merge(intervals):
     return stack
 
 ```
+
+Problems solved using `Marge Interval`:
+
+- [Merge Intervals](https://leetcode.com/problems/merge-intervals/)
+- [Insert Interval](https://leetcode.com/problems/insert-interval/)
