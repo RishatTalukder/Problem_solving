@@ -1,3 +1,6 @@
+Sliding window is a very Popular algorithm. It's a two pointer algorithm and the two pointers go from the same direction to the end of the array. The window is the range between the two pointers. The window can be fixed size or variable size. The window can be a subarray, substring, or subsequence. The window can be a s
+
+```python
 class Solution:
     def lengthOfLongestSubstring(self, s: str) -> int:
         left = 0 #declaring a left pointer
@@ -21,3 +24,6 @@ class Solution:
                 result = len(characters) #updating the result
 
         return result #returning the result
+
+```
+
