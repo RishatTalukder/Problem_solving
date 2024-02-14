@@ -13,5 +13,10 @@ class Solution:
 
             else:
                 stack.append(i)
-
         return stack
+
+
+
+shit_list = []
+
+print(shit_list)
