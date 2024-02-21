@@ -1,10 +1,9 @@
-list_of_nums = [1,2,3,4,5,6,7,8,9,10]
-counter = 0
+n = 5
 
-for i in list_of_nums:
-        counter += 1
-        if counter%2 == 0:
-            list_of_nums.remove(i)
+m = 100
 
-        print(list_of_nums)
 
+# and bitwise operation for n to m
+
+for i in range(n, m):
+    n = n & i+1
