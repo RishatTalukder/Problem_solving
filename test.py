@@ -1,9 +1,6 @@
-n = 5
+demohashmap = {
+    "name": "John",
+    "age": 30,
+}
 
-m = 100
-
-
-# and bitwise operation for n to m
-
-for i in range(n, m):
-    n = n & i+1
+print(demohashmap.keys()[0])
