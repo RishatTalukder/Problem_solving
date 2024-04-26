@@ -1,6 +1,1 @@
-demohashmap = {
-    "name": "John",
-    "age": 30,
-}
-
-print(demohashmap.keys()[0])
+print(2 or 3)
