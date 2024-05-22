@@ -20,6 +20,21 @@ class Solution:
 
 class Solution:
     def productExceptSelf(self, nums):
+        res1 = [1] * len(nums)
+        res2 = [1] * len(nums)
+
+        for i in range(1, len(nums)):
+            res1[i] = res1[i-1] * nums[i-1]
+
+        for i in range(len(nums)-2, -1, -1):
+            res2[i] = res2[i+1] * nums[i+1]
+
+        return [res1[i] * res2[i] for i in range(len(nums))]
+    
+
+
+class Solution:
+    def productExceptSelf(self, nums):
         """
         Calculates the product of all elements in the given list except self.
 
