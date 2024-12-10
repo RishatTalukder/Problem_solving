@@ -1,23 +1,11 @@
-from functools import cache
-
 class Solution:
-    def climbStairs(self, n: int) -> int:
-        count = 0
-        @cache
-        def steps(n):
-            nonlocal count
-            if n == 0:
-                count += 1
-                return
-            if n < 0:
-                return
-            steps(n - 1)
-            steps(n - 2)
+    def climbStairs(self, n: int, cache = {}) -> int:
+        if n == 0:
+            return 1
+        if n < 0:
+            return 0
+        
+        if n not in cache:
+            cache[n] = self.climbStairs(n-1) + self.climbStairs(n-2)
 
-        return count
-    
-
-sol = Solution()
-
-print(sol.climbStairs(2))  # 2
-print(sol.climbStairs(3))  # 3
+        return cache[n]

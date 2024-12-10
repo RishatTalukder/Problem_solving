@@ -1,22 +1,25 @@
 class Solution:
     def wordBreak(self, s: str, wordDict: List[str]) -> bool:
         word_set = set(wordDict)
-        n = len(s)
-        memo = {}
+        cache = {}
 
-        def dfs(start):
-            if start == n:
+        def dfs(s):
+            if s in cache:
+                return cache[s]
+            
+            if s in word_set:
                 return True
             
-            if start in memo:
-                return memo[start]
-            
-            for end in range(start + 1, n + 1):
-                if s[start:end] in word_set and dfs(end):
-                    memo[start] = True
-                    return True
+            for i in range(1, len(s)):
+                pre = s[:i]
+
+                if pre in word_set and dfs(s[i:]):
+                    cache[pre] = True
+                    return cache[pre]
                 
-            memo[start] = False
-            return False
+
+            cache[s] = False
+            return cache[s]
         
-        return dfs(0)
+
+        return dfs(s)
