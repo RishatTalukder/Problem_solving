@@ -1,3 +1,16 @@
+from collections import deque
+
+class Solution:
+    def isSubsequence(self, s: str, t: str) -> bool:
+        s = deque(s)
+        for char in t:
+            if not s:
+                return True
+            if char == s[0]:
+                s.popleft()
+        return not s
+
+
 class Solution:
     def isSubsequence(self, s: str, t: str) -> bool:
         l1=l2=0
