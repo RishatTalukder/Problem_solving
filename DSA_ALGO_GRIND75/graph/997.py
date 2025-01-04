@@ -11,12 +11,9 @@ class Solution:
             if len(adj_list[i]) == 0:
                 judge = i
                 break
-            else:
-                judge = -1
-
-        if judge == -1:
+        else:
             return -1
-        
+
         for i in range(1,n+1):
             if i == judge:
                 continue
