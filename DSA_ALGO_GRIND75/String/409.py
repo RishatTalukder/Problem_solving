@@ -24,3 +24,27 @@ class Solution:
             result += 1 #adding 1 to the result
 
         return result #returning the result
+    
+
+
+class Solution:
+    def longestPalindrome(self, s: str) -> int:
+        s_count = Counter(s)
+
+        odds = 0
+        result = 0
+
+        for i in s_count.values();
+            if i%2 == 0:
+                result+=i
+            
+            else:
+                result+=i-1
+                odds+= 1
+
+
+        if odds:
+            result += 1
+
+
+        return result
