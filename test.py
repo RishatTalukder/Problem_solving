@@ -1,17 +1,9 @@
-# import time
+from collections import OrderedDict, Counter
 
-# n = 1000000
+nums = [3,0,1,0,2]
 
-# start = time.time()
+nums_count = OrderedDict(sorted(Counter(nums).items(), key=lambda x: x[1], reverse=True))
+nums_count_ordered = OrderedDict(Counter(nums))
 
-# for i in range(n):
-#     for i in range(n):
-#         print(i)
-
-# end = time.time()
-
-# print("Time taken for print loop: ", end-start)
-print((6^3)^(4^5)) # 3
-print(6^(3^4)^5) # 2
-print(6^3^4^5) # 2
-print(2^10^5)
+print(nums_count)
+print(nums_count_ordered)

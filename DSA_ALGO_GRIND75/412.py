@@ -1,20 +1,21 @@
-class Solution:
-    def fizzBuzz(self, n):
-        shit_list = []
-        for i in range(1,n+1):
-            if i%3 == 0 and i%5 ==0:
-                shit_list.append("FizzBuzz")
-            
-            elif i%3==0:
-                shit_list.append("Fizz")
+from typing import List
 
-            elif i%5==0:
-                shit_list.append("Buzz")
+class Solution:
+    def fizzBuzz(self, n: int) -> List[str]:
+        ans = [str(i) for i in range(1,n+1)]
+
+        for ind, val in enumerate(ans):
+            num = int(val)
+            if num%3==0 and num%5==0:
+                ans[ind] = "FizzBuzz"
+            elif num%3==0:
+                ans[ind] = "Fizz"
+            elif num%5==0:
+                ans[ind] = "Buzz"
             
-            else:
-                shit_list.append(str(i))
-        
-        return shit_list
+
+        return ans
+            
     
 n = 15
 print(Solution().fizzBuzz(n))
