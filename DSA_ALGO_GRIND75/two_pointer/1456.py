@@ -23,3 +23,27 @@ class Solution:
             if maxVowels == k: return k
         # if never reached highest possible, return max
         return maxVowels
+    
+class Solution:
+    def maxVowels(self, s: str, k: int) -> int:
+        is_vowel = [c in {'a', 'e', 'i', 'o', 'u'} for c in s]
+
+        max_vowels = curr_vowels = sum(is_vowel[:k])
+
+        if max_vowels == k:
+            return k
+        
+        for i in range(k, len(s)):
+            if is_vowel[i-k]:
+                curr_vowels -= 1
+
+            if is_vowel[i]:
+                curr_vowels += 1
+
+            if curr_vowels > max_vowels:
+                max_vowels = curr_vowels
+
+            if max_vowels == k:
+                return k
+            
+        return max_vowels
