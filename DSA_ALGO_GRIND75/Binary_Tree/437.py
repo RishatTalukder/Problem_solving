@@ -7,31 +7,31 @@ class TreeNode(object):
         self.right = None
 
 class Solution(object):
-    def pathSum(self, root, sum):
+    def pathSum(self, root, target_sum):
         
-        def dfs(sumHash, prefixSum, node):
-
+        def dfs(sum_hash, current_sum, node):
             if not node:
                 return 0
             
-			# Sum of current path
-            prefixSum += node.val
+            # Update the current path sum
+            current_sum += node.val
             
-			# number of paths that ends at current node
-            path = sumHash[prefixSum - sum] 
+            # Calculate the number of valid paths ending at the current node
+            path_count = sum_hash[current_sum - target_sum]
             
-			# add currentSum to prefixSum Hash
-            sumHash[prefixSum] += 1
+            # Update the sum_hash with the current path sum
+            sum_hash[current_sum] += 1
             
-			# traverse left and right of tree
-            path += dfs(sumHash, prefixSum, node.left) + dfs(sumHash, prefixSum, node.right)
+            # Recursively search the left and right subtrees
+            path_count += dfs(sum_hash, current_sum, node.left)
+            path_count += dfs(sum_hash, current_sum, node.right)
         
-		    # remove currentSum from prefixSum Hash
-            sumHash[prefixSum] -= 1
+            # Backtrack: remove the current path sum from the sum_hash
+            sum_hash[current_sum] -= 1
             
-            return path
+            return path_count
         
-        # depth first search, initialize sumHash with prefix sum of 0, occurring once
+        # Initialize the sum_hash with the prefix sum of 0 occurring once
         return dfs(defaultdict(int, {0: 1}), 0, root)
         
 

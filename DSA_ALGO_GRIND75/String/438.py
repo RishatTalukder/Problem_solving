@@ -66,3 +66,37 @@ class Solution:
             right += 1 #moving the right pointer by 1
 
         return result #returning the result list
+    
+
+from collections import Counter
+
+class Solution:
+    def findAnagrams(self, s: str, p: str) -> List[int]:
+        left = 0
+        p_counter = Counter(p)
+        s_counter = Counter(s[left:len(p)])
+
+        res = []
+
+        if p_counter == s_counter:
+            res.append(left)
+
+        right = len(p)
+
+        while right < len(s):
+            s_counter[s[left]] -= 1
+            s_counter[s[right]] += 1
+
+            if s_counter[s[left]] == 0:
+                del s_counter[s[left]]
+
+            if p_counter == s_counter:
+                res.append(left + 1)
+
+            left += 1
+
+            right += 1
+
+        return res
+
+            

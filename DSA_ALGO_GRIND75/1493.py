@@ -1,17 +1,21 @@
 class Solution:
     def longestSubarray(self, nums: list[int]) -> int:
 
-        l, mx = 0,0
-        k = 1
+        left, right, mx = 0, 0, 0
+        zero_count = 0
 
-        for r,n in enumerate(nums):
-            k -= (1-n)
+        while right < len(nums):
+            if nums[right] == 0:
+                zero_count += 1
 
-            if k<0:
-                k += (1-nums[l])
-                l += 1
+            while zero_count> 1:
+                if nums[left] == 0:
+                    zero_count -= 1
+                left += 1
 
-            mx = max(mx,r-l)
+            mx = max(mx, right - left)
+
+            right += 1
 
         return mx
 
