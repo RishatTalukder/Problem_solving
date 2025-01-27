@@ -4,13 +4,11 @@ class Solution:
 
         arr_count = Counter(arr)
 
-        arr_count = sorted(arr_count.items(), key=lambda x: x[1])
+        for key, val in sorted(arr_count.items(), key=lambda x: x[1]):
+            if k >= val:
+                k -= val
+                del arr_count[key]
+            else:
+                break
 
-        for i in range(len(arr_count)):
-
-            k -= arr_count[i][1]
-
-            if k < 0:
-                return len(arr_count) - i
-            
-        return 0
+        return len(arr_count)

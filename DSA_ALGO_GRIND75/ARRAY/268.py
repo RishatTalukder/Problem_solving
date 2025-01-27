@@ -11,10 +11,10 @@
 
 class Solution:
     def missingNumber(self, nums: List[int]) -> int:
-        nums.sort()
+        nums_set = set(i for i in range(len(nums)+1))
 
-        for ind, val in enumerate(nums):
-            if ind != val:
-                return ind
-            
-        return len(nums)
+        for i in nums:
+            if i in nums_set:
+                nums_set.remove(i)
+
+        return nums_set.pop()

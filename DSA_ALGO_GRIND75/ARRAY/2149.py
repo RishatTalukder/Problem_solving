@@ -1,17 +1,18 @@
 class Solution:
     def rearrangeArray(self, nums: List[int]) -> List[int]:
-        positive = []
-        negetive = []
-        final = [0]*len(nums)
-        for i in nums:
-            if i > 0:
-                positive.append(i)
+        even_arr = []
+        odd = []
 
+        for num in nums:
+            if num >=0:
+                even_arr.append(num)
             else:
-                negetive.append(i)
+                odd.append(num)
 
-        for i in range(0,len(nums),2):
-            final[i] = positive[i//2]
-            final[i+1] = negetive[i//2]
+        res = []
 
-        return final
+        for i in range(len(even_arr)):
+            res.append(even_arr[i])
+            res.append(odd[i])
+
+        return res
