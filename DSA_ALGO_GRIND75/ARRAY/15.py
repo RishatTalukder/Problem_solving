@@ -29,3 +29,8 @@ class Solution:
         return res
                     
                     
+
+    
+
+sol = Solution()
+print(sol.threeSum([0,0,0,0])) # [[0,0,0]]
