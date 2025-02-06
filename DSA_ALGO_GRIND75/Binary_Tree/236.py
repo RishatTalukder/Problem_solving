@@ -40,3 +40,23 @@ class Solution:
         
         # Otherwise, return the valid lowest common ancestor from either left or right subtree
         return left or right
+    
+
+class Solution:
+    def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+        if not root:
+            return None
+        
+        def post_order(node):
+            if node == p or node == q or not node:
+                return node
+            
+            left = post_order(node.left)
+            right = post_order(node.right)
+
+            if left and right:
+                return node
+            
+            return left or right
+        
+        return post_order(root)

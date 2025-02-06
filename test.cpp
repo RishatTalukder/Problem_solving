@@ -1,17 +1,27 @@
 #include<iostream>
-
+#include<unordered_map>
 using namespace std;
 
 int main()
 {
-    int arr[5] = {1,2,3,4,5};
-    int target = 13;
-    int len = sizeof(arr)/sizeof(arr[0]); // to find the lenngth of a array we use this formula
-    for(int i=0; i <=len-1; i++){
-        if(arr[i]==target){
-            cout<<i<<endl;
-            return 0;
+    int arr[7] = {1,2,3,3,5,3,3};
+    unordered_map<int, int> counter;
+    int n = sizeof(arr)/sizeof(arr[0]);
+
+    for(int i=0;i<n;i++){
+        if(counter.count(arr[i]) == 0){
+            counter[arr[i]] = 1;
+        }
+        else{
+            counter[arr[i]]++;
         }
     }
-    cout<<"target not found"<<endl;
+    for(auto i:counter){
+        if (i.second > n/2){
+            cout << i.first << endl;
+        }
+        else{
+            cout << "No Majority Element" << endl;
+        }
+    }
 } // namespace std;
