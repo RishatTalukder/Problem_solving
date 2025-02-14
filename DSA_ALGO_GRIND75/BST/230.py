@@ -51,6 +51,52 @@ class Solution:
         inorder(root)
         return res[-1]
     
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def kthSmallest(self, root, k: int) -> int:
+        count = 0
+        res = None
+
+        def inorder(node):
+            nonlocal count, res
+            if node is None:
+                return None
+            inorder(node.left)
+            count += 1 
+            if count == k:
+                res = node.val
+                return
+
+            inorder(node.right)
+
+        inorder(root)
+        return res
+    
+class Solution:
+    def kthSmallest(self, root, k: int) -> int:
+        count = 0
+        res = None
+
+        def inorder(node):
+            nonlocal count, res
+            if not node:
+                return None
+
+            inorder(node.left)
+            count += 1
+            if count == k:
+                res = root.val
+                return 
+
+            inorder(node.right)
+
+        inorder(root)
+        return res
 
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):

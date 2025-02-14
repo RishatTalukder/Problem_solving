@@ -101,3 +101,33 @@ class Solution:
         
         return True
         
+
+#kahn's algorithm
+from collections import deque
+
+def kanhs_algorithm(numCourses, prerequisites):
+    graph = defaultdict(list)
+    in_degree = [0] * numCourses
+
+    for course, prerequisite in prerequisites:
+        graph[prerequisite].append(course)
+        in_degree[course] += 1
+
+    queue = deque([i for i in range(numCourses) if in_degree[i] == 0])
+
+    visited_courses = 0
+
+    while queue:
+        current = queue.popleft()
+        visited_courses += 1
+
+        for neighbor in graph[current]:
+            in_degree[neighbor] -= 1
+            if in_degree[neighbor] == 0:
+                queue.append(neighbor)
+    
+    return visited_courses == numCourses
+
+class Solution:
+    def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
+        

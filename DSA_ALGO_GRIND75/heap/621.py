@@ -29,3 +29,24 @@ class Solution:
                 idle_time += n_temp
 
         return len(tasks) + idle_time
+
+
+class Solution:
+    def leastInterval(self, tasks: List[str], n: int) -> int:
+        counter = Counter(tasks)
+        idle_time = 0
+
+
+        while counter:
+            n_temp = n+1
+            for task, _ in counter.most_common(n_temp):
+                counter[task] -= 1
+                if counter[task] == 0:
+                    del counter[task]
+
+                n_temp -= 1
+
+            if counter:
+                idle_time += n_temp
+
+        return len(tasks) + idle_time
