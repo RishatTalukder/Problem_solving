@@ -1,18 +1,13 @@
 class Solution:
     def maxScore(self, s: str) -> int:
-        s_count = Counter(s)
-        left = 0
-        ans = 0
+        left = 1 if s[0] == "0" else 0
+        right = s[1:].count("1")
+        max_score = left + right
+        for i in range(1,len(s)-1):
+            if s[i] == "0":
+                left += 1
+            else:
+                right -= 1
+            max_score = max(max_score, left+right)
 
-        n = len(s)
-        count = 0
-        while left < n-1:
-            if s[left] == "0":
-                count += 1
-                s_count["0"] -= 1
-            
-            ans = max(ans, count + (n-s_count["0"]-(left+1)))
-            
-            left += 1
-
-        return ans
+        return max_score
