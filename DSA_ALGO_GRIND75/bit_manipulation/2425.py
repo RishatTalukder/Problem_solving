@@ -20,22 +20,25 @@ class Solution:
 
         return ans
     
-#another approach faster
-class Solution:
-    def xorAllNums(self, nums1: List[int], nums2: List[int]) -> int:
-        len1 ,len2 = len(nums1), len(nums2)
+# #another approach faster
+# class Solution:
+#     def xorAllNums(self, nums1: List[int], nums2: List[int]) -> int:
+#         len1 ,len2 = len(nums1), len(nums2)
 
-        ans = 0
+#         ans = 0
 
-        if len2%2:
-            for num in nums1:
-                ans^=num
+#         if len2%2:
+#             for num in nums1:
+#                 ans^=num
 
-        if len1%2:
-            for num in nums2:
-                ans^=num
+#         if len1%2:
+#             for num in nums2:
+#                 ans^=num
 
-        return ans
+#         return ans
+    
+
+
 
             
     
