@@ -24,16 +24,10 @@ class Solution:
 
 class Solution:
     def closeStrings(self, word1: str, word2: str) -> bool:
-        word1_count = Counter(word1)
-        word2_count = Counter(word2)
+        count1 = Counter(word1)
+        count2 = Counter(word1)
 
-        word1_count_list = sorted(word1_count.values())
-        word2_count_list = sorted(word2_count.values())
-
-        if word1_count_list != word2_count_list:
+        if sorted(count1.values()) != sorted(count2.values()):
             return False
 
-        word1_key_list = sorted(word1_count.keys())
-        word2_key_list = sorted(word2_count.keys())
-
-        return word1_key_list == word2_key_list
+        return sorted(count1.keys()) == sorted(count2.keys())
