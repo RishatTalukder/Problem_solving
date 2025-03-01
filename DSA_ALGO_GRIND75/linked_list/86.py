@@ -8,21 +8,21 @@ class Solution:
         if not head:
             return head
         
-        greater_than_eql = ListNode()
-        greater_than_eql_head = greater_than_eql
+        ge = ListNode()
+        ge_head = ge
         prev = dummy = ListNode()
         dummy.next = head
         while head:
             if head.val >= x:
-                greater_than_eql.next = head
-                greater_than_eql = greater_than_eql.next
+                ge.next = head
+                ge = ge.next
             else:
                 prev.next = head
                 prev = prev.next
 
             head = head.next
 
-        greater_than_eql.next = None
-        prev.next = greater_than_eql_head.next
+        ge.next = None
+        prev.next = ge_head.next
 
         return dummy.next
