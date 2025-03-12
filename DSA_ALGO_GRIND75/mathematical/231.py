@@ -1,13 +1,14 @@
+
 class Solution:
     def isPowerOfTwo(self, n: int) -> bool:
-        if n == 0:
-            return False
+        x = 2
 
         if n == 1:
             return True
         
-        elif n%2 != 0:
-            return False
-
-        else:
-            return self.isPowerOfTwo(n//2)
+        while x < n:
+            x *= 2
+            if x == n:
+                return True
+            
+        return False

@@ -8,3 +8,14 @@ class Solution:
 
 sol = Solution()
 print(sol.arrangeCoins(5)) # 2
+
+
+from math import sqrt
+
+class Solution:
+    def arrangeCoins(self, n: int) -> int:
+        """
+        Returns the maximum number of complete rows of a staircase 
+        that can be formed with 'n' coins.
+        """
+        return int((-1 + sqrt(1 + 8 * n)) // 2)

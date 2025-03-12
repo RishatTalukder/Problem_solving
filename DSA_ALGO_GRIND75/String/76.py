@@ -75,3 +75,49 @@ class Solution:
         l, r = result
 
         return s[l:r+1] if result_length != float("infinity") else ""
+
+
+class Solution:
+    def minWindow(self, s: str, t: str) -> str:
+        s_len = len(s)
+        t_len = len(t)
+
+        if s_len < t_len and t == "":
+            return ''
+
+        t_counter = Counter(t)
+        temp = Counter()
+        have, need = 0, len(t_counter)
+        right,left = 0,0
+        result = [-1,-1]
+        result_len = float("infinity")
+
+        while right < s_len:
+            temp[s[right]] += 1
+            if s[right] in t_counter and temp[s[right]] == t_counter[s[right]]:
+                have += 1
+
+            while have == need:
+                if (right -left + 1) < result_len:
+                    result = [left,right]
+                    result_len = right-left+1
+
+                temp[s[left]] -= 1
+
+                if s[left] in t_counter and temp[s[left]] < t_counter[s[left]]:
+                    have -= 1
+
+                left += 1
+            
+            right += 1
+
+        if result[0] == -1:
+            return ''
+
+        l,r = result
+
+        if result_len == float('infinity'):
+            return ''
+        
+        else:
+            return s[l:r+1]
