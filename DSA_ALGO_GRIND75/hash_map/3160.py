@@ -39,5 +39,5 @@ class Solution:
             balance_map[key] = value
             balance_count[value] += 1
             results.append(len(balance_count))
-
+    
         return results
