@@ -29,6 +29,7 @@ class Solution:
     """
     def reconstructQueue(self, people):
         people.sort(key= lambda x : (-x[0], x[1]))
+        print(people)
         res = []
         for i in people:
             res.insert(i[1],i)
@@ -36,4 +37,4 @@ class Solution:
     
 
 sol = Solution()
-print(sol.reconstructQueue([[7,1],[4,4],[7,0],[5,0],[6,1],[5,2]])) # [[5,0],[7,0],[5,2],[6,1],[4,4],[7,1]]
+print(sol.reconstructQueue([[7,1],[4,4],[7,0],[5,2],[5,0],[6,1]])) # [[5,0],[7,0],[5,2],[6,1],[4,4],[7,1]]

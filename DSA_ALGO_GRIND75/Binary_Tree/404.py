@@ -32,50 +32,21 @@ class Solution:
             
         return summ
 
-class Solution:
-    def sumOfLeftLeaves(self, root) -> int:
-        if not root:
-            return 0
+# class Solution:
+#     def sumOfLeftLeaves(self, root) -> int:
+#         if not root:
+#             return 0
         
-        def dfs(node,isleft):
-            if not node:
-                return 0
-            if not node.left and not node.right and isleft:
-                return node.val
+#         def dfs(node,isleft):
+#             if not node:
+#                 return 0
+#             if not node.left and not node.right and isleft:
+#                 return node.val
             
-            return dfs(node.left,True) + dfs(node.right,False)
+#             return dfs(node.left,True) + dfs(node.right,False)
         
-        return dfs(root,False)
+#         return dfs(root,False)
     
-class Solution:
-    def sumOfLeftLeaves(self, root) -> int:
-        if not root:
-            return 0
-        
-        queue = deque()
-        
-        if root.left:
-            queue.append(root.left)
-        
-        if root.right:
-            queue.append(root.right)
-
-        summ = 0
-
-        while queue:
-            summ += queue[0].val
-
-            for _ in range(len(queue)):
-                node = queue.popleft()
-                if node.left:
-                    queue.append(node.left)
-                if node.right:
-                    queue.append(node.right)
-
-        return summ
-
-
-
 
 
 
