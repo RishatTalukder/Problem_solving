@@ -16,7 +16,7 @@ You’ll be able to copy this each day, fill it in, and publish it directly.
 
 ---
 
-### 📝 Problem Summary *(in your own words)*
+### 📝 Problem Summary _(in your own words)_
 
 > Briefly describe what the problem is asking. Writing it yourself improves retention and helps others understand the core of the problem without reading the full statement.
 
@@ -24,13 +24,13 @@ You’ll be able to copy this each day, fill it in, and publish it directly.
 
 ### 🧠 My Thought Process
 
-* **Brute Force Idea:**
-  *Start with the naive approach (if applicable)*
+- **Brute Force Idea:**
+  _Start with the naive approach (if applicable)_
 
-* **Optimized Strategy:**
-  *Describe how you improved it. Use diagrams or list steps if helpful.*
+- **Optimized Strategy:**
+  _Describe how you improved it. Use diagrams or list steps if helpful._
 
-* **Algorithm Used:**
+- **Algorithm Used:**
   e.g. `Sliding Window`, `Binary Search`, `Backtracking`, etc.
 
 ---
@@ -48,32 +48,32 @@ def function_name(params):
 
 ### ⏱️ Time & Space Complexity
 
-* **Time:** O(...)
-* **Space:** O(...)
+- **Time:** O(...)
+- **Space:** O(...)
 
 ---
 
 ### 🧩 Key Takeaways
 
-* ✅ What concept or trick did I learn?
-* 💡 What made this problem tricky?
-* 💭 How will I recognize a similar problem in the future?
+- ✅ What concept or trick did I learn?
+- 💡 What made this problem tricky?
+- 💭 How will I recognize a similar problem in the future?
 
 ---
 
 ### 🔁 Reflection (Self-Check)
 
-* [ ] Could I solve this without help?
-* [ ] Did I write code from scratch?
-* [ ] Did I understand why it works?
-* [ ] Will I be able to recall this in a week?
+- [ ] Could I solve this without help?
+- [ ] Did I write code from scratch?
+- [ ] Did I understand why it works?
+- [ ] Will I be able to recall this in a week?
 
 ---
 
 ### 📚 Related Problems
 
-* [Similar Problem 1](#)
-* [Similar Problem 2](#)
+- [Similar Problem 1](#)
+- [Similar Problem 2](#)
 
 ---
 
