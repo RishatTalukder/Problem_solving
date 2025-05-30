@@ -1,4 +1,4 @@
-## 🧠 Solving LeetCode Until I Become Top 1% — Day `2`
+## 🧠 Solving LeetCode Until I Become Top 1% — Day `3`
 
 ### 🔹 Problem: [3373. Maximize the Number of Target Nodes After Connecting Trees II](https://leetcode.com/problems/maximize-the-number-of-target-nodes-after-connecting-trees-ii/description/?envType=daily-question&envId=2025-05-29)
 
