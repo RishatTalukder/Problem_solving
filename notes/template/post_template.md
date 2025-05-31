@@ -1,11 +1,3 @@
-Perfect — here’s a **hybrid Markdown template** designed to serve both as:
-
-1. ✅ **Your personal daily problem-solving template**, and
-2. 📢 **A public post format** for platforms like daily.dev or LinkedIn.
-
-You’ll be able to copy this each day, fill it in, and publish it directly.
-
----
 
 ## 🧠 Solving LeetCode Until I Become Top 1% — Day `X`
 

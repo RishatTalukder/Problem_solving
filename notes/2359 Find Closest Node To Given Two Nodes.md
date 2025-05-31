@@ -2,7 +2,7 @@
 
 ### 🔹 Problem: [2359 Find Closest Node to Given Two Nodes](https://leetcode.com/problems/find-closest-node-to-given-two-nodes/description/?envType=daily-question&envId=2025-05-30)
 
-**Difficulty:** Medium
+**Difficulty:** #Medium
 **Tags:** #Graph #DFS
 
 ---
