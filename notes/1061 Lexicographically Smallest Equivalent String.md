@@ -94,8 +94,9 @@ class Solution:
 
 ### 🚀 Progress Tracker
 
-| Metric                | Value |
-| --------------------- | ----- |
-| Day                   | `10`  |
-| Total Problems Solved | `345` |
-| Confidence Today      | 😃    |
+| Metric                | Value      |
+| --------------------- | ---------- |
+| Day                   | `10`       |
+| Total Problems Solved | `345`      |
+| Confidence Today      | 😃         |
+| Rating                | `532` + 20 |
