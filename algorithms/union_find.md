@@ -4,8 +4,8 @@
 
 **Union-Find**, also known as **Disjoint Set Union (DSU)**, is a data structure that keeps track of a set of elements partitioned into a number of disjoint (non-overlapping) subsets. It supports two primary operations efficiently:
 
-* **Find**: Determine which subset a particular element belongs to.
-* **Union**: Merge two subsets into a single subset.
+- **Find**: Determine which subset a particular element belongs to.
+- **Union**: Merge two subsets into a single subset.
 
 Union-Find is widely used in solving problems related to **connectivity** in graphs.
 
@@ -15,13 +15,13 @@ Union-Find is widely used in solving problems related to **connectivity** in gra
 
 Union-Find is particularly useful in the following scenarios:
 
-* **Connected components** in a graph
-* **Cycle detection** in undirected graphs
-* **Kruskal’s algorithm** for finding Minimum Spanning Tree
-* **Equivalence problems** (e.g., Leetcode 1061, 399, 1202)
-* **Dynamic connectivity** problems
-* **Image segmentation**
-* **Social network groups**
+- **Connected components** in a graph
+- **Cycle detection** in undirected graphs
+- **Kruskal’s algorithm** for finding Minimum Spanning Tree
+- **Equivalence problems** (e.g., Leetcode 1061, 399, 1202)
+- **Dynamic connectivity** problems
+- **Image segmentation**
+- **Social network groups**
 
 ---
 
@@ -70,8 +70,8 @@ class UnionFind:
 
 ## ⏱️ Time Complexity
 
-* **Amortized Time per Operation**: Nearly constant `O(α(n))`, where `α` is the inverse Ackermann function — grows extremely slowly.
-* Very efficient in practice, even for large datasets (e.g., `10^5` or more elements).
+- **Amortized Time per Operation**: Nearly constant `O(α(n))`, where `α` is the inverse Ackermann function — grows extremely slowly.
+- Very efficient in practice, even for large datasets (e.g., `10^5` or more elements).
 
 ---
 
@@ -86,7 +86,6 @@ Union-Find helps group characters and efficiently determine the representative (
 
 ## ✅ Summary
 
-* Union-Find is a powerful structure for managing dynamic sets.
-* Optimizations like **path compression** and **union by rank** make it very efficient.
-* Essential in graph algorithms, equivalence problems, and connected components.
-
+- Union-Find is a powerful structure for managing dynamic sets.
+- Optimizations like **path compression** and **union by rank** make it very efficient.
+- Essential in graph algorithms, equivalence problems, and connected components.
