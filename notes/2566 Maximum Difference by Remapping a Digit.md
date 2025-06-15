@@ -82,6 +82,12 @@ class Solution:
 - [✅] Did I understand why it works?
 - [✅] Will I be able to recall this in a week?
 
+
+---
+
+### 📚 Related Problems
+
+- [[1432 Max Difference You Can Get From Changing an Integer]]
 ---
 
 ### 🚀 Progress Tracker
