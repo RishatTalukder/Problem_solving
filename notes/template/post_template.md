@@ -8,7 +8,7 @@
 
 ---
 
-### 📝 Problem Summary _(in your own words)_
+### 📝 Problem Summary
 
 > Briefly describe what the problem is asking. Writing it yourself improves retention and helps others understand the core of the problem without reading the full statement.
 
