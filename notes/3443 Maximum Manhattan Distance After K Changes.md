@@ -15,14 +15,14 @@
 
 ### 🧠 My Thought Process
 
-* **Brute Force Idea:**
+- **Brute Force Idea:**
   I knew I had to somehow simulate all the directions and check how far they took me. I thought of trying every combination of up to `k` changes to see what gave the farthest point, but that's exponential.
 
-* **Optimized Strategy:**
+- **Optimized Strategy:**
   I figured I could **count occurrences** of `N`, `S`, `E`, `W`, then try to convert `S` into `N` (or vice versa), and similarly for `E`/`W`, to **maximize directional imbalance**. I even understood that converting `S → N` boosts distance by `+2`...
   But I wasn't 100% confident with how to distribute the `k` changes between axes, so I looked up the solution.
 
-* **Algorithm Used:**
+- **Algorithm Used:**
   [[greedy]] [[counter]] [[manhatten_distance]]
 
 ---
@@ -60,32 +60,31 @@ class Solution:
 
 ### ⏱️ Time & Space Complexity
 
-* **Time:** O(n) — single pass through the string
-* **Space:** O(1) — only counters used
+- **Time:** O(n) — single pass through the string
+- **Space:** O(1) — only counters used
 
 ---
 
 ### 🧩 Key Takeaways
 
-* ✅ I learned that direction imbalance can be manipulated with a greedy strategy.
-* 💡 Changing `S → N` increases the imbalance by 2, not 1.
-* 💭 Next time I see a Manhattan distance with limited moves/modifications, I'll think in terms of balancing and maximizing axis difference.
+- ✅ I learned that direction imbalance can be manipulated with a greedy strategy.
+- 💡 Changing `S → N` increases the imbalance by 2, not 1.
+- 💭 Next time I see a Manhattan distance with limited moves/modifications, I'll think in terms of balancing and maximizing axis difference.
 
 ---
 
 ### 🔁 Reflection (Self-Check)
 
-* [x] Could I solve this without help? → Almost, but needed validation.
-* [x] Did I write code from scratch? → Yes, then compared.
-* [x] Did I understand why it works? → Fully after exploring the `+2` gain.
-* [x] Will I be able to recall this in a week? → Definitely.
+- [x] Could I solve this without help? → Almost, but needed validation.
+- [x] Did I write code from scratch? → Yes, then compared.
+- [x] Did I understand why it works? → Fully after exploring the `+2` gain.
+- [x] Will I be able to recall this in a week? → Definitely.
 
 ---
 
 ### 📚 Related Problems
 
-* [121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
-* [1493. Longest Subarray of 1's After Deleting One Element](https://leetcode.com/problems/longest-subarray-of-1s-after-deleting-one-element/)
+- [[1162 As Far from Land as Possible]]
 
 ---
 
@@ -93,10 +92,6 @@ class Solution:
 
 | Metric                | Value |
 | --------------------- | ----- |
-| Day                   | `X`   |
-| Total Problems Solved | `Y`   |
+| Day                   | `25`  |
+| Total Problems Solved | `356` |
 | Confidence Today      | 😃    |
-
----
-
-Let me know if you want this in Markdown format or want help tracking your streak/progress with a Notion or GitHub setup!
