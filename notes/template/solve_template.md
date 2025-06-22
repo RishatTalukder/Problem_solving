@@ -1,7 +1,5 @@
 # {{Problem Number}}. {{Problem Title}}
 
-- 📅 Date Solved: 
-- 🔁 Revisit Date: 
 - 💡 Difficulty: Easy | Medium | Hard
 - 🧩 Tags: #TwoPointers #DP #BinarySearch
 - 🔄 Pattern: 
