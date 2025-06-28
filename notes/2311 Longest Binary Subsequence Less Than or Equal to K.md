@@ -22,7 +22,7 @@ Return the **maximum possible length** of such a valid subsequence.
 ### 🧠 My Thought Process
 
 - **Brute Force Idea:**
-  This porblem is all the `avengers` of subsequences! Caught me off guard with the constraints. First of all it's a subsequence problem, so I I thoguht it has to be a [[dp]] problem. The it also is a binary string, so I it's a dynamic bit manipulation problem. Then it hit me that it's a medium problem, so it can't be that hard. So, I thought [[greedy]] would be the way to go. But couldn't figure out how to do it. I was thinking of generating all subsequences and checking their values, but that would be too slow (O(2^n)). So, as i did for many of my previous problems, I decided to **look up the solution**.
+  This porblem is all the `avengers` of subsequences! Caught me off guard with the constraints. First of all it's a subsequence problem, so I I thoguht it has to be a [[dp]] problem. The it also is a binary string, so I it's a dynamic bit manipulation problem. Then it hit me that it's a medium problem, so it can't be that hard. So, I thought [[Greedy]] would be the way to go. But couldn't figure out how to do it. I was thinking of generating all subsequences and checking their values, but that would be too slow (O(2^n)). So, as i did for many of my previous problems, I decided to **look up the solution**.
 
 - **Greedy Observations:**
   I noticed that `'0'`s **don’t contribute to the binary value**, so you can safely include them all.

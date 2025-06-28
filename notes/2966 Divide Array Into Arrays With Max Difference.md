@@ -29,7 +29,7 @@
   4. If any triplet violates the rule, return an empty list immediately.
 
 - **Algorithm Used**:
-  [[sorting]] [[greedy]]
+  [[Sorting]] [[Greedy]]
 
 ---
 

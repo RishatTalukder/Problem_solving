@@ -7,7 +7,7 @@
 
 ---
 
-### 📝 Problem Summary 
+### 📝 Problem Summary
 
 > Find the lexicographically smallest string that can be formed by using a robot that can do the following operations:
 
@@ -32,7 +32,7 @@
   - Now we can check if the last character in the stack is lexicographically smaller than the current min character and if it is then we can pop the last character from the stack and append it to the result string.
 
 - **Algorithm Used:**
-  [[greedy]]
+  [[Greedy]]
 
 ---
 

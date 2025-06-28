@@ -50,7 +50,7 @@
   4. **Return the final string.**
 
 - **Algorithm Used:**
-  [[greedy]] [[heap]]
+  [[Greedy]] [[heap]]
 
 ---
 

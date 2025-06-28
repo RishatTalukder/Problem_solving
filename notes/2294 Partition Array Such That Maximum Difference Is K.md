@@ -29,7 +29,7 @@ Return the **minimum number of such subsequences** required to partition the arr
   ✅ This way, we guarantee we form groups with the minimum possible size and minimize total groups.
 
 - **Algorithm Used:**
-  [[greedy]] + [[sorting]]
+  [[Greedy]] + [[Sorting]]
 
 ---
 

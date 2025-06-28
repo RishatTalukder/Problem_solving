@@ -32,7 +32,7 @@
 - **Algorithm Used:**
 
   - [[BFS]]
-  - [[greedy]]
+  - [[Greedy]]
   - [[counter]]
 
 ---
@@ -98,5 +98,5 @@ class Solution:
 | Metric                | Value |
 | --------------------- | ----- |
 | Day                   | `32`  |
-| Total Problems Solved | `365`   |
+| Total Problems Solved | `365` |
 | Confidence Today      | 😐    |

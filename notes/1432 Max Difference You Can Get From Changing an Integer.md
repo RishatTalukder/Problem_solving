@@ -82,10 +82,10 @@ From a given integer `num`, create two new integers `a` and `b` by replacing **a
 
 - It ensures **only one digit** is replaced globally in each transformation (per the rules).
 - Maximizes and minimizes using smart digit targeting (`9` and `1` or `0`) without violating **leading zero** constraints.
-- Efficient and [[greedy]] — finds the best possible digits to manipulate.
+- Efficient and [[Greedy]] — finds the best possible digits to manipulate.
 
 * **Algorithm Used:**
-  [[greedy]]
+  [[Greedy]]
 
 ---
 

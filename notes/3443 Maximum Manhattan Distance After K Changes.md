@@ -23,7 +23,7 @@
   But I wasn't 100% confident with how to distribute the `k` changes between axes, so I looked up the solution.
 
 - **Algorithm Used:**
-  [[greedy]] [[counter]] [[manhatten_distance]]
+  [[Greedy]] [[counter]] [[manhatten_distance]]
 
 ---
 
