@@ -10,14 +10,14 @@
 ### 📝 Problem Summary
 
 > 2 undirected trees are given, `tree1` and `tree2`, each with `n` and `m` nodes respectively. Goal is to find the maximum number of nodes in `tree2` that can be connected to each node in `tree1` such that the length of the path from any node in `tree1` to its connected node in `tree2` is even.
-> almost same as [[3372]].
+> almost same as [[3372 Maximize the Number of Target Nodes After Connecting Trees I]].
 
 ---
 
 ### 🧠 My Thought Process
 
 - **Whats the difference between this problem and its predecessor?**
-  _The only difference is that in [[3372]] the path length was given as `target` or `k`, but in this problem the path length is even, which means that the path length can be `2, 4, 6, ...` and so on. and also it's a hard problem so I think the greedy approach wont work here_
+  _The only difference is that in [[3372 Maximize the Number of Target Nodes After Connecting Trees I]] the path length was given as `target` or `k`, but in this problem the path length is even, which means that the path length can be `2, 4, 6, ...` and so on. and also it's a hard problem so I think the greedy approach wont work here_
 
 - **Brute Force Idea:**
   _I have no idea how to solve this problem, nada, zero, nothing, but i have the best brute force idea ever! can you guess what it is?_
