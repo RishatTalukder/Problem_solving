@@ -98,6 +98,6 @@ class Solution:
 
 | Metric                | Value |
 | --------------------- | ----- |
-| Day                   | `36`  |
-| Total Problems Solved | `371` |
+| Day                   | `37`  |
+| Total Problems Solved | `373` |
 | Confidence Today      | 😐    |
