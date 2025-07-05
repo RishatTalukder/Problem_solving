@@ -27,7 +27,7 @@
 - **Step 4:** Finally, return the difference `max_odd - min_even`.
 
 - **Algorithm Used:**
-  [[counter]]
+  [[Counter]]
 
 ---
 

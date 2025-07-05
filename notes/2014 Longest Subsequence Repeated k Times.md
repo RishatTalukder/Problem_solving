@@ -33,7 +33,7 @@
 
   - [[BFS]]
   - [[Greedy]]
-  - [[counter]]
+  - [[Counter]]
 
 ---
 
