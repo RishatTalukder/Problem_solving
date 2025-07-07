@@ -1,4 +1,4 @@
-## 🧠 Solving LeetCode Until I Become Top 1% — Day `37`
+## 🧠 Solving LeetCode Until I Become Top 1% — Day `39`
 
 ### 🔹 Problem: [1353. Maximum Number of Events That Can Be Attended](https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended/)
 
