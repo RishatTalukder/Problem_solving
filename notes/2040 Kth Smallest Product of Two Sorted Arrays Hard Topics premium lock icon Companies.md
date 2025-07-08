@@ -55,7 +55,8 @@
 ---
 
 ### Algorithms Used
-  [[binary_search]] 
+
+[[Binary_Search]]
 
 ### ⚙️ Code Implementation (Python)
 

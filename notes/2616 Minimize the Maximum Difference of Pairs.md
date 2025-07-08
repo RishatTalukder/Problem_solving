@@ -38,7 +38,7 @@
      - Continue until either all elements are processed or `p` pairs are formed.
 
 - **Algorithm Used:**
-  [[binary_search]] [[Sorting]]
+  [[Binary_Search]] [[Sorting]]
 
 ---
 

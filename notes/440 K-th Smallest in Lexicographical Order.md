@@ -96,7 +96,7 @@
   - Repeat until `k` steps are made.
 
 - **Algorithm Used:**
-  [[binary_search]] [[prefix_tree_trie]]
+  [[Binary_Search]] [[prefix_tree_trie]]
 
 ---
 
