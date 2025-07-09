@@ -97,6 +97,10 @@ class Solution:
 
 - [[1353 Maximum Number of Events That Can Be Attended]]
 
+- [[2008 Maximum Earnings From Taxi]]
+
+- [[2054 Two Best Non-Overlapping Events]]
+- [[2402. Meeting Rooms III]]
 ---
 
 ### 🚀 Progress Tracker
