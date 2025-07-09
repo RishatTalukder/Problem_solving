@@ -108,5 +108,5 @@ class Solution:
 | Metric                | Value |
 | --------------------- | ----- |
 | Day                   | `40`  |
-| Total Problems Solved | `377` |
+| Total Problems Solved | `378` |
 | Confidence Today      | 😐    |
