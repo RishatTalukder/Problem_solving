@@ -24,7 +24,7 @@
     - So, we just need to find the largest character in the string and try to take the largest possible substring that starts with that character.
 
 - **Algorithm Used:**
-  [[two_pointer]]
+  [[Two_Pointer]]
 
 ---
 

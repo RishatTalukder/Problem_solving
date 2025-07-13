@@ -38,7 +38,7 @@
 
 - **Algorithm Used:**
 
-  [[two_pointer]]
+  [[Two_Pointer]]
 
 ---
 
@@ -89,6 +89,7 @@ class Solution:
 
 - [[1 Two Sum]]
 - [[2817 Minimum Absolute Difference Between Elements With Constraint]]
+
 ---
 
 ### 🚀 Progress Tracker
