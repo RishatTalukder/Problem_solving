@@ -1,4 +1,3 @@
-
 ## 🧠 Solving LeetCode Until I Become Top 1% — Day `X`
 
 ### 🔹 Problem: [Problem Title](https://leetcode.com/problems/problem-slug/)
@@ -76,3 +75,4 @@ def function_name(params):
 | Day                   | `X`          |
 | Total Problems Solved | `Y`          |
 | Confidence Today      | 😃 / 😐 / 😣 |
+| Leetcode Rating       | `1572`       |
