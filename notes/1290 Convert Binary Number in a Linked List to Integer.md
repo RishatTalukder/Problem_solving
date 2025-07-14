@@ -1,4 +1,4 @@
-## 🧠 Solving LeetCode Until I Become Top 1% — Day `42`
+## 🧠 Solving LeetCode Until I Become Top 1% — Day `43`
 
 ### 🔹 Problem: [1290. Convert Binary Number in a Linked List to Integer](https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/)
 
@@ -78,7 +78,7 @@ class Solution:
 
 | Metric                | Value  |
 | --------------------- | ------ |
-| Day                   | `42`   |
+| Day                   | `43`   |
 | Total Problems Solved | `384`  |
 | Confidence Today      | 😃     |
 | Leetcode Rating       | `1572` |
