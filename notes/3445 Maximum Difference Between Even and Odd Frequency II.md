@@ -49,7 +49,7 @@ Yup. Sounds deceptively easy, like a classic sliding window problem, right? Righ
 
 ### Algorithm Used:
 
-[[fenwick_tree]] [[prefix_sum]] [[bitmasking]] [[dp]] [[hash_map]]
+[[fenwick_tree]] [[Prefix_Sum]] [[bitmasking]] [[dp]] [[hash_map]]
 
 ---
 

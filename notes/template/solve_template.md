@@ -1,4 +1,4 @@
-# {{Problem Number}}. {{Problem Title}}
+# 📍{{Problem Number}}. {{Problem Title}}
 
 - 💡 Difficulty: Easy | Medium | Hard
 - 🧩 Tags: #TwoPointers #DP #BinarySearch

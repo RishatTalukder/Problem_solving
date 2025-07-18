@@ -30,16 +30,16 @@ If `l = 0`, then it's simply `prefix[r]`.
 
 Use Prefix Sum when:
 
-* You're repeatedly querying the sum of elements in a range.
-* You're dealing with frequency counts or histogram analysis.
-* You want to optimize time from O(n) to O(1) per query.
+- You're repeatedly querying the sum of elements in a range.
+- You're dealing with frequency counts or histogram analysis.
+- You want to optimize time from O(n) to O(1) per query.
 
 Common in:
 
-* Range sum queries
-* Sliding window problems
-* Binary search with cumulative constraints
-* Subarrays satisfying certain conditions
+- Range sum queries
+- Sliding window problems
+- Binary search with cumulative constraints
+- Subarrays satisfying certain conditions
 
 ---
 
@@ -85,9 +85,9 @@ To get sum of arr[1..3] → 4 + 6 + 1 = 11
 
 ### 🧩 Variations
 
-* **2D Prefix Sum** (for matrix subregions)
-* **Prefix XOR**, **Prefix Max/Min**
-* **Difference Array** (reverse of prefix sum; used for range updates)
+- **2D Prefix Sum** (for matrix subregions)
+- **Prefix XOR**, **Prefix Max/Min**
+- **Difference Array** (reverse of prefix sum; used for range updates)
 
 ---
 

@@ -19,7 +19,7 @@
   _We can use a nested loop to check every pair of elements, but this will be inefficient because the time complexity will be O(n^2)._
 
 - **Optimized Strategy:**
-  **Although the O(n^2) approach works, there is a more efficient way to solve this problem using a single pass through the array. Keep this pattern in mind if you encounter a problem where you need to din the maximum or minimum of a sequence of elements you can use [[prefix_sum]] algorithm. But there is a catch prefix sum is a modified version of another [[dp]] algorithm called [[kadane's_algorithm]].**
+  **Although the O(n^2) approach works, there is a more efficient way to solve this problem using a single pass through the array. Keep this pattern in mind if you encounter a problem where you need to din the maximum or minimum of a sequence of elements you can use [[Prefix_Sum]] algorithm. But there is a catch prefix sum is a modified version of another [[dp]] algorithm called [[kadane's_algorithm]].**
 
   _"Kadene's algorithm keeps track of the past, only if it's valueable"_
 
