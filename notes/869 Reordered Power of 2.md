@@ -1,4 +1,4 @@
-## 🧠 Solving LeetCode Until I Become Top 1% — Day `55`
+## 🧠 Solving LeetCode Until I Become Top 1% — Day `56`
 
 ### 🔹 Problem: [869 Reordered Power of 2](https://leetcode.com/problems/reordered-power-of-2/)
 
