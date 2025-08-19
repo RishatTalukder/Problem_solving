@@ -1,4 +1,4 @@
-## 🧠 Solving LeetCode Until I Become Top 1% — Day `61`
+## 🧠 Solving LeetCode Until I Become Top 1% — Day `62`
 
 ### 🔹 Problem: [2348. Number of Zero-Filled Subarrays](https://leetcode.com/problems/number-of-zero-filled-subarrays/description/?envType=daily-question&envId=2025-08-19)
 
