@@ -2,7 +2,7 @@
 
 `Order complexity analysis` is method used to evaluate the `complexity` of algorithms or data structures based on their `order` of growth. This analysis helps in understanding how the performance of an algorithm scales with the size of the input.
 
-Let's say we have an algorithm that has a time function `T(n)` where `n` is the size of the input. 
+Let's say we have an algorithm that has a time function `T(n)` where `n` is the size of the input.
 
 For example, here is a simple code snippet that demonstrates the concept of order complexity:
 
@@ -30,3 +30,5 @@ This is called `Big O notation`, which provides an upper bound on the growth rat
 Here is a small plot to visualize the order of complexity:
 
 ![alt text](image.png)
+
+**NEXT**: [[2_Experimental_Complexity_Analysis]]
