@@ -66,3 +66,5 @@ for size in input_sizes:
 ```
 
 This code generates random arrays of different sizes, sorts them using both algorithms, and prints the execution
+
+Next: [[3_Big_O_Notation|Big O Notation]].

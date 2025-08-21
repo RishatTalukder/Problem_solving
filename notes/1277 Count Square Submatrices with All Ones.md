@@ -21,10 +21,10 @@
 - **Optimized Strategy:**
   _This problem has a simple twist: we can use dynamic programming to keep track of the size of the largest square submatrix ending at each cell. The value at each cell will be the minimum of the values from the top, left, and top-left diagonal cells plus one if the current cell is 1._
 
-    - It's kinda hard to explain, but the idea is that if we have a square submatrix ending at (i, j), then the size of that square is determined by the minimum of the squares ending at (i-1, j), (i, j-1), and (i-1, j-1).
+  - It's kinda hard to explain, but the idea is that if we have a square submatrix ending at (i, j), then the size of that square is determined by the minimum of the squares ending at (i-1, j), (i, j-1), and (i-1, j-1).
 
 - **Algorithm Used:**
-  [[Matrix]] [[dp]] 
+  [[Matrix]] [[dp]]
 
 ---
 
@@ -57,7 +57,7 @@ class Solution:
 
 ### ⏱️ Time & Space Complexity
 
-- **Time:** O(m * n)
+- **Time:** O(m \* n)
 - **Space:** O(1) - In-place modification of the input matrix
 
 ---
@@ -65,11 +65,11 @@ class Solution:
 ### 🧩 Key Takeaways
 
 - ✅ What concept or trick did I learn?
-    _Dynamic programming can be used to efficiently count square submatrices by building on previously computed values._
+  _Dynamic programming can be used to efficiently count square submatrices by building on previously computed values._
 - 💡 What made this problem tricky?
-    _Understanding how to use the minimum of neighboring cells to determine the size of the square submatrix was key._
+  _Understanding how to use the minimum of neighboring cells to determine the size of the square submatrix was key._
 - 💭 How will I recognize a similar problem in the future?
-    _Look for problems involving counting or finding submatrices, especially those that can be solved with dynamic programming._
+  _Look for problems involving counting or finding submatrices, especially those that can be solved with dynamic programming._
 
 ---
 
@@ -93,7 +93,7 @@ class Solution:
 
 | Metric                | Value        |
 | --------------------- | ------------ |
-| Day                   | `63`          |
-| Total Problems Solved | `424`          |
+| Day                   | `63`         |
+| Total Problems Solved | `424`        |
 | Confidence Today      | 😃 / 😐 / 😣 |
 | Leetcode Rating       | `1572`       |
