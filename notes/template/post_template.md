@@ -75,4 +75,4 @@ def function_name(params):
 | Day                   | `X`          |
 | Total Problems Solved | `Y`          |
 | Confidence Today      | 😃 / 😐 / 😣 |
-| Leetcode Rating       | `1572`       |
+| Leetcode Rating       | `1530`       |
