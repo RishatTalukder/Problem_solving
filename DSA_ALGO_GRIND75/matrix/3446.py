@@ -3,28 +3,27 @@ from typing import List
 
 class Solution:
     def sortMatrix(self, grid: List[List[int]]) -> List[List[int]]:
-        n = len(grid)
-        diagonals = defaultdict(list)
+        hashmap = defaultdict(list)
+        rows = len(grid)
+        cols = len(grid[0])
 
-        # Step 1: Group all elements by their diagonal index (row - col)
-        for row in range(n):
-            for col in range(n):
-                diag_key = row - col
-                diagonals[diag_key].append(grid[row][col])
+        # Group elements by diagonal (key = row - col)
+        for row in range(rows):
+            for col in range(cols):
+                key = row - col
+                hashmap[key].append(grid[row][col])
 
-        # Step 2: Sort each diagonal:
-        #         - If diagonal key is negative, sort in descending order
-        #         - Else, sort in ascending order
-        for diag_key in diagonals:
-            if diag_key < 0:
-                diagonals[diag_key].sort(reverse=True)
+        # Sort each diagonal
+        for key in hashmap:
+            if key < 0:
+                hashmap[key].sort(reverse=True)
             else:
-                diagonals[diag_key].sort()
+                hashmap[key].sort()
 
-        # Step 3: Write the sorted diagonals back into the grid
-        for row in range(n):
-            for col in range(n):
-                diag_key = row - col
-                grid[row][col] = diagonals[diag_key].pop()
+        # Refill the matrix with sorted diagonals
+        for row in range(rows):
+            for col in range(cols):
+                key = row - col
+                grid[row][col] = hashmap[key].pop()
 
         return grid
