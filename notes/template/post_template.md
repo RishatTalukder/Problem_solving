@@ -2,8 +2,8 @@
 
 ### 🔹 Problem: [Problem Title](https://leetcode.com/problems/problem-slug/)
 
-**Difficulty:** Easy / Medium / Hard
-**Tags:** `Array`, `DP`, `Greedy`, etc.
+**Difficulty:** #Easy / #Medium / #Hard
+**Tags:** #Array, #DP, #Greedy, etc.
 
 ---
 
