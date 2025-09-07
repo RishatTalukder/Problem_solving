@@ -80,19 +80,29 @@ class LinkedList:
             print(temp.val)
             temp = temp.next
 
+    def reverse(self):
+        if self.len  == 0:
+            return
+        curr = self.head
+        prev = None
+
+        while curr is not None:
+            next = curr.next
+            curr.next = prev
+            prev = curr
+            curr = next
+
+        self.head, self.tail = self.tail, self.head
+
+
+
+
 llist = LinkedList(1)
-llist.append(2) 
+llist.append(2)
 llist.append(3)
-llist.append(4) 
+llist.append(4)
 
-llist.print_list()
-print(f'Index val: {llist.index(0)}') 
 
-llist.insert(2,6)
-
-llist.print_list()
-
-val = llist.remove(1)
-
-print(f'Removed val: {val}')
+llist.reverse()
+print('Reversed list:')
 llist.print_list()
