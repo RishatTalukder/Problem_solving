@@ -1,81 +1,78 @@
-## 🧠 Solving LeetCode Until I Become Top 1% — Day `76`
+## 🧠 Solving LeetCode Until I Become Top 1% — Day `X`
 
-### 🔹 Problem: [1304 Find N Unique Integers Sum up to Zero](https://leetcode.com/problems/find-n-unique-integers-sum-up-to-zero/?envType=daily-question&envId=2025-09-07)
+### 🔹 Problem: [Problem Title](https://leetcode.com/problems/problem-slug/)
 
-**Difficulty:** #Easy
-**Tags:** #Math, #Constructive
+**Difficulty:** #Easy / #Medium / #Hard
+**Tags:** #Array, #DP, #Greedy, etc.
 
 ---
 
 ### 📝 Problem Summary
 
-> Given an integer `n`, return an array of `n` **unique integers** such that they sum up to 0.
+> Briefly describe what the problem is asking. Writing it yourself improves retention and helps others understand the core of the problem without reading the full statement.
 
 ---
 
 ### 🧠 My Thought Process
 
-* **Brute Force Idea:**
-  Generate random numbers and try to adjust until their sum is zero. This would be messy and inefficient.
+- **Brute Force Idea:**
+  _Start with the naive approach (if applicable)_
 
-* **Optimized Strategy:**
+- **Optimized Strategy:**
+  _Describe how you improved it. Use diagrams or list steps if helpful._
 
-  * Pair positive and negative integers: `(1, -1), (2, -2), ...`
-  * If `n` is even, the pairs are enough.
-  * If `n` is odd, just add `0` to balance everything out.
-  * This guarantees uniqueness and ensures the sum is always 0.
-
-* **Algorithm Used:**
-  Constructive Math (pairing positives and negatives).
+- **Algorithm Used:**
+  e.g. `Sliding Window`, `Binary Search`, `Backtracking`, etc.
 
 ---
 
 ### ⚙️ Code Implementation (Python)
 
 ```python
-class Solution:
-    def sumZero(self, n: int) -> List[int]:
-        ans = []
-        for i in range(1, n // 2 + 1):
-            ans.append(i)
-            ans.append(-i)
-        if n % 2 == 1:
-            ans.append(0)
-        return ans
+# Brief comment about the approach
+def function_name(params):
+    # implementation
+    pass
 ```
 
 ---
 
 ### ⏱️ Time & Space Complexity
 
-* **Time:** O(n) — we generate `n` elements.
-* **Space:** O(n) — storing the result array.
+- **Time:** O(...)
+- **Space:** O(...)
 
 ---
 
 ### 🧩 Key Takeaways
 
-* ✅ Learned how constructive math can directly give the answer without brute force.
-* 💡 The “pairing” trick is a powerful way to balance sums.
-* 💭 If a problem asks for sums = 0 (or balanced counts), think about symmetry.
+- ✅ What concept or trick did I learn?
+- 💡 What made this problem tricky?
+- 💭 How will I recognize a similar problem in the future?
 
 ---
 
 ### 🔁 Reflection (Self-Check)
 
-* [x] Could I solve this without help?
-* [x] Did I write code from scratch?
-* [x] Did I understand why it works?
-* [x] Will I be able to recall this in a week?
+- [ ] Could I solve this without help?
+- [ ] Did I write code from scratch?
+- [ ] Did I understand why it works?
+- [ ] Will I be able to recall this in a week?
 
+---
+
+### 📚 Related Problems
+
+- [Similar Problem 1](#)
+- [Similar Problem 2](#)
 
 ---
 
 ### 🚀 Progress Tracker
 
-| Metric                | Value  |
-| --------------------- | ------ |
-| Day                   | `76`    |
-| Total Problems Solved | `440`    |
-| Confidence Today      | 😃     |
-| Leetcode Rating       | `1530` |
+| Metric                | Value        |
+| --------------------- | ------------ |
+| Day                   | `X`          |
+| Total Problems Solved | `Y`          |
+| Confidence Today      | 😃 / 😐 / 😣 |
+| Leetcode Rating       | `1530`       |
