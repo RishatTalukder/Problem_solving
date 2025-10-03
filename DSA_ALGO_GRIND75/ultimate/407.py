@@ -45,6 +45,30 @@ class Solution:
         return result
 
     
-sol = Solution()
-print(sol.trapRainWater([[1,4,3,1,3,2],[3,2,1,3,2,4],[2,3,3,2,3,1]])) # 4
-    
+class Solution:
+    def trapRainWater(self, heightMap: List[List[int]]) -> int:
+
+        if not heightMap or len(heightMap) <3 or len(heightMap[0])<3:
+            return 0
+        rows = len(heightMap)
+        cols = len(heightMap[0])
+        visited = [[False]*cols for _ in range(rows)]
+        heap = []
+        for i in range(rows):
+            for j in range(cols):
+                if i ==0 or i == rows-1 or j == 0 or j == cols-1:
+                    visited[i][j] = True
+                    heapq.heappush(heap, (heightMap[i][j], i, j))
+
+        result = 0
+
+        while heap:
+            height, i ,j = heapq.heappop(heap)
+
+            for ni,nj in [(i+1,j),(i-1,j),(i,j+1),(i,j-1)]:
+                if 0<=ni<rows and 0<=nj<cols and not visited[ni][nj]:
+                    visited[ni][nj] = True
+                    result += max(0, height - heightMap[ni][nj])
+                    heapq.heappush(heap, (max(height, heightMap[ni][nj]), ni, nj))
+
+        return result
