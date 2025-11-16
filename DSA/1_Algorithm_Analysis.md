@@ -6,4 +6,6 @@ To classify some a `data structure` or an `algorithm` as `good`, we must have a 
 
 There can be many different ways to do this, one of them is [[Experimental_Studies]].
 
+![[Experimental_Studies]]
+
 When an algorithm is implemented we can directly measure it's performance using by recording it's runtime from inside the program.
