@@ -40,3 +40,48 @@ class Solution:
         return deepest.pop()
 
 
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
+class Solution:
+    def subtreeWithAllDeepest(self, root: Optional[TreeNode]) -> Optional[TreeNode]:
+        if not root:
+            return None
+
+        parents = {root:None}
+
+        q = deque([root])
+
+        last = []
+
+        while q:
+            last = []
+            n = len(q)
+
+            for _ in range(n):
+                node = q.popleft()
+                last.append(node)
+
+                if node.left:
+                    q.append(node.left)
+                    parents[node.left] = node
+
+                if node.right:
+                    q.append(node.right)
+                    parents[node.right] = node
+
+
+        deep = set(last)
+
+        while len(deep)>1:
+            deep = {parents[node] for node in deep}
+
+
+        return deep.pop()
+
+
+
+
