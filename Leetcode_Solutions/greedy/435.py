@@ -10,3 +10,19 @@ class Solution:
                 prev = interval[1]
 
         return res
+    
+class Solution:
+    def eraseOverlapIntervals(self, intervals: List[List[int]]) -> int:
+        intervals.sort(key = lambda x:x[1])
+
+        ans = 0
+        prev = intervals[0]
+
+        for curr in intervals[1:]:
+            if curr[0] < prev[1]:
+                ans += 1
+
+            else:
+                prev = curr
+
+        return ans
