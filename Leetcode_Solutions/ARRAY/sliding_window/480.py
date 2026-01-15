@@ -1,4 +1,4 @@
-from bisect import insort
+from bisect import insort, bisect_left
 
 
 class Solution:
@@ -19,3 +19,26 @@ class Solution:
             insort(window, nums[i])
 
         return median
+    
+class Solution:
+    def medianSlidingWindow(self, nums: List[int], k: int) -> List[float]:
+        med = []
+        window = sorted(nums[:k])
+        is_odd = k%2
+
+        for i in range(k, len(nums)+1):
+            if is_odd:
+                med.append(window[k//2])
+
+            else:
+                median = (window[k//2-1] + window[k//2])/2
+                med.append(median)
+
+            if i == len(nums):
+                break
+
+            window.pop(bisect_left(window, nums[i-k]))
+            insort(window, nums[i])
+
+
+        return med
