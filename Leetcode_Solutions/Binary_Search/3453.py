@@ -26,3 +26,37 @@ class Solution:
                 high = mid
 
         return mid
+    
+class Solution:
+    def separateSquares(self, squares: List[List[int]]) -> float:
+        high = float('-inf')
+        low = float('inf')
+
+        total = 0
+
+        for x,y, l in squares:
+            total += l*l
+            high = max(high, y+l)
+            low = min(low, y)
+
+
+        target = total/2
+
+        eps = 10**-6
+
+        while (high-low) > eps:
+            mid = (high+low)/2
+
+            under = 0
+
+            for x,y,l in squares:
+                height = max(0, min(l, mid-y))
+                under += height*l
+
+            if under < target:
+                low = mid
+
+            else:
+                high = mid
+
+        return mid
