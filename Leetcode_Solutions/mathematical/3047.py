@@ -4,10 +4,10 @@ class Solution:
     ) -> int:
         max_size = 0
 
-        for (bottom_left_i, top_right_i), (
-            bottom_left_j,
-            top_right_j,
-        ) in combinations(zip(bottomLeft, topRight), 2):
+        for i, j in combinations(zip(bottomLeft, topRight), 2):
+
+            (bottom_left_i, top_right_i) = i
+            (bottom_left_j,top_right_j) = j
             w = min(top_right_i[0], top_right_j[0]) - max(
                 bottom_left_i[0], bottom_left_j[0]
             )
@@ -17,4 +17,4 @@ class Solution:
 
             max_size = max(max_size, min(w, h))
 
-        return max_size * max_size
+        return max_size * max_size 
