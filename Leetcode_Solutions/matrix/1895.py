@@ -2,14 +2,12 @@ class Solution:
     def largestMagicSquare(self, grid: List[List[int]]) -> int:
         m, n = len(grid), len(grid[0])
 
-        # prefix sum of each row
         rowsum = [[0] * n for _ in range(m)]
         for i in range(m):
             rowsum[i][0] = grid[i][0]
             for j in range(1, n):
                 rowsum[i][j] = rowsum[i][j - 1] + grid[i][j]
 
-        # prefix sum of each column
         colsum = [[0] * n for _ in range(m)]
         for j in range(n):
             colsum[0][j] = grid[0][j]
