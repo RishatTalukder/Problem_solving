@@ -21,3 +21,21 @@ class Solution:
             max_size = max(max_size, min(w, h))
 
         return max_size * max_size 
+    
+
+class Solution:
+    def largestSquareArea(self, bottomLeft: List[List[int]], topRight: List[List[int]]) -> int:
+        size = 0
+
+        for i, j in combinations(zip(bottomLeft, topRight), 2):
+            bli,tri = i
+            blj,trj = j
+
+            w = min(tri[0],trj[0]) - max(bli[0], blj[0])
+            h = min(tri[1],trj[1]) - max(bli[1], blj[1])
+
+            size = max(size, min(w,h))
+
+
+        return size*size
+            

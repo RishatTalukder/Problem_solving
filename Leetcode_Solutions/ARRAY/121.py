@@ -9,3 +9,17 @@ class Solution(object):
                 buy = sell
         
         return profit
+    
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        ans = 0
+        buy = prices[0]
+
+        for price in prices:
+            if price <= buy:
+                buy = price
+
+            else:
+                ans = max(ans, price-buy)
+
+        return ans
