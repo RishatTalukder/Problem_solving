@@ -13,5 +13,14 @@ class Solution:
 
         return res
 
-sol = Solution()
-print(sol.findArray([5,2,0,3,1])) # [1,3,0,4]
+class Solution:
+    def findArray(self, pref: List[int]) -> List[int]:
+        ans = [pref[0]]
+        prev = pref[0]
+
+        for i in pref[1:]:
+            val = prev^i
+            ans.append(val)
+            prev = i
+
+        return ans
