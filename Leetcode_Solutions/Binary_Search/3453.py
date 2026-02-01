@@ -20,6 +20,8 @@ class Solution:
                 curr += l*cur_y
 
             if curr < target:
+
+                
                 low = mid
 
             else:

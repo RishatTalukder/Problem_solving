@@ -16,3 +16,7 @@ sol = Solution()
 random.seed(10)
 print(sol.minMoves([random.randint(1, 100) for _ in range(10)])) # 45
 print(sol.minMoves([1,2,3])) # 3
+
+class Solution:
+    def minMoves(self, nums: List[int]) -> int:
+        return sum(nums) - len(nums)*min(nums)

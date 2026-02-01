@@ -24,3 +24,14 @@ class Solution:
             prev = i
 
         return ans
+
+class Solution:
+    def findArray(self, pref: List[int]) -> List[int]:
+        prev=pref[0]
+        ans = [pref[0]]
+
+        for i in pref[1:]:
+            ans.append(prev^i)
+            prev = i
+
+        return ans
