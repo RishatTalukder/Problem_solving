@@ -2,6 +2,7 @@ import tkinter as tk
 import random
 import time
 
+
 # --- Bubble Sort with step-by-step swaps ---
 def bubble_sort(arr):
     n = len(arr)
@@ -13,6 +14,7 @@ def bubble_sort(arr):
             yield a, None  # no pivot in bubble sort
     yield a, None
 
+
 # --- Quick Sort with step-by-step swaps ---
 def quick_sort(arr, low, high):
     if low < high:
@@ -20,6 +22,7 @@ def quick_sort(arr, low, high):
         yield arr, pivot_index
         yield from quick_sort(arr, low, pivot_index - 1)
         yield from quick_sort(arr, pivot_index + 1, high)
+
 
 def partition(arr, low, high):
     pivot = arr[high]
@@ -32,6 +35,7 @@ def partition(arr, low, high):
     arr[i + 1], arr[high] = arr[high], arr[i + 1]
     yield arr, i + 1  # highlight final pivot position
     return i + 1, arr
+
 
 # --- Drawing bars ---
 def draw_bars(canvas, arr, pivot_index=None):
@@ -55,9 +59,10 @@ def draw_bars(canvas, arr, pivot_index=None):
 
     root.update_idletasks()
 
+
 # --- Run visualization (shared) ---
 def run_visualization(algorithm):
-    arr = list(range(1, 300))  # adjust size for speed
+    arr = list(range(1, 500))  # adjust size for speed
     random.shuffle(arr)
 
     if algorithm == "bubble":
@@ -67,7 +72,8 @@ def run_visualization(algorithm):
 
     for step, pivot_index in gen:
         draw_bars(canvas, step, pivot_index)
-        time.sleep(0.005)  # adjust speed
+        # time.sleep(0.1)  # adjust speed
+
 
 # --- Tkinter UI ---
 root = tk.Tk()
@@ -78,10 +84,14 @@ canvas.pack()
 frame = tk.Frame(root)
 frame.pack()
 
-bubble_btn = tk.Button(frame, text="Bubble Sort", command=lambda: run_visualization("bubble"))
+bubble_btn = tk.Button(
+    frame, text="Bubble Sort", command=lambda: run_visualization("bubble")
+)
 bubble_btn.pack(side="left", padx=10, pady=5)
 
-quick_btn = tk.Button(frame, text="Quick Sort", command=lambda: run_visualization("quick"))
+quick_btn = tk.Button(
+    frame, text="Quick Sort", command=lambda: run_visualization("quick")
+)
 quick_btn.pack(side="left", padx=10, pady=5)
 
 root.mainloop()
