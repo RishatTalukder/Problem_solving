@@ -1,3 +1,4 @@
+# my version, looks a little bruteforce
 from collections import Counter
 import math
 
@@ -40,3 +41,32 @@ for i in count:
         right += i*math.floor(count[i]//2)
 
 print(left + odd_key + right[::-1])
+
+
+# clean version
+from collections import Counter
+
+string = input()
+
+count = Counter(string)
+odd_chars = []
+
+for char, freq in count.items():
+    if freq % 2 == 1:
+        odd_chars.append(char)
+
+if len(odd_chars) > 1:
+    print("NO SOLUTION")
+    exit()
+
+middle = odd_chars[0] if odd_chars else ""
+
+left = ""
+
+for char, freq in count.items():
+    left += char * (freq // 2)
+
+result = left + middle + left[::-1]
+
+print(result)
+
