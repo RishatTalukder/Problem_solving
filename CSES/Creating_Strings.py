@@ -1,3 +1,5 @@
+from collections import Counter
+
 res = []
 
 cache = set()
@@ -23,11 +25,32 @@ def permute(string, current):
 
 
 # frequency
+def frequency_permute(current):
+    if len(current) == len(string):
+        res.append(''.join(current))
+        return
+    
+    for i in sorted(freq.keys()):
+        if freq[i] == 0:
+            continue
+
+        current.append(i)
+
+        freq[i] -= 1
+
+        frequency_permute(current)
+
+        freq[i] += 1
+        current.pop()
 
 
 string = list(input())
 
-permute(string, 0)
+freq = Counter(string)
+
+# permute(string, 0)
+frequency_permute([])
+
 
 print(len(res))
 print(*sorted(res), sep="\n")
