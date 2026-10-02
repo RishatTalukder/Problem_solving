@@ -19,4 +19,25 @@ class Solution:
             elif ch in hashmap:
                 brackets.append(hashmap[ch])
 
-        return True if not brackets else False
+        return bool(not brackets)
+
+
+class Solution:
+    def isValid(self, s: str) -> bool:
+        hashmap = {
+            '{' : '}',
+            '(' : ')',
+            '[' : ']'
+        }
+
+        stack = []
+
+        for ch in s:
+            if ch not in hashmap:
+                if len(stack) == 0 or len(stack) > 0 and stack.pop() != ch:
+                    return False
+
+            elif ch in hashmap:
+                stack.append(hashmap[ch])
+
+        return len(stack) == 0
