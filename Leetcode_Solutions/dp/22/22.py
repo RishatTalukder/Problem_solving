@@ -16,3 +16,25 @@ class Solution:
         dp('', 0, 0)
 
         return ans
+
+class Solution:
+    def generateParenthesis(self, n: int) -> list[str]:
+        res = []
+        
+        def dp(open, close, s):
+            if open == n and close == n:
+                res.append(s)
+                return
+
+            
+            if open < n:
+                dp(open+1, close, s+'(')
+
+            if close < open:
+                dp(open, close+1, s+')')
+
+            
+
+        dp(0,0,'')
+
+        return res
