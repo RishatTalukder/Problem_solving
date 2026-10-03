@@ -41,3 +41,24 @@ class Solution:
                 stack.append(hashmap[ch])
 
         return len(stack) == 0
+
+class Solution:
+    def isValid(self, s: str) -> bool:
+        hash = {
+            '{' : '}',
+            '(' : ')',
+            '[' : ']'
+        }
+
+        stack = []
+
+        for ch in s:
+            if ch not in hash:
+                if len(stack) == 0 or stack.pop() != ch:
+                    return False
+
+            elif ch in hash:
+                stack.append(hash[ch])
+                
+
+        return len(stack) == 0
