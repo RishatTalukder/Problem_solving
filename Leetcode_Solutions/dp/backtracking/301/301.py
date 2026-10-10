@@ -1,54 +1,51 @@
 class Solution:
     def removeInvalidParentheses(self, s: str) -> list[str]:
         n = len(s)
-        res = set()
         maxln = 0
-
-        def solve(s, i, curr, count):
+        res = set()
+        
+        def backtrack(s, i, cur, count):
             nonlocal maxln
-
-            if count < 0 :
+            if count < 0:
                 return
-
 
             if i == n:
                 if count == 0:
-                    if len(curr) > maxln:
-                        maxln = len(curr)
+                    if len(cur) > maxln:
+                        maxln = len(cur)
                         res.clear()
-                        res.add(''.join(curr))
+                        res.add(''.join(cur))
 
-                    elif len(curr) == maxln:
-                        res.add(''.join(curr))
-
+                    if len(cur) == maxln:
+                        res.add(''.join(cur))
 
                 return
 
-            
             if s[i] not in '()':
-                curr.append(s[i])
-                solve(s, i+1, curr, count)
-                curr.pop()
+                cur.append(s[i])
+                backtrack(s, i+1, cur, count)
+                cur.pop()
                 return
 
-            curr.append(s[i])
+            cur.append(s[i])
 
-            solve(
+            backtrack(
                 s,
                 i+1,
-                curr,
+                cur,
                 count + (1 if s[i] == '(' else -1)
             )
 
-            curr.pop()
+            cur.pop()
 
-            solve(
+            backtrack(
                 s,
                 i+1,
-                curr, 
+                cur,
                 count
             )
 
-        solve(s, 0, [], 0)
+        
+        backtrack(s, 0, [], 0)
 
         return list(res)
