@@ -1,68 +1,93 @@
-# Intuition
+# Minimum Additions to Balance Parentheses Using a Stack
 
-We need to find how many parentheses are missing to make the string valid.
+## Intuition
 
-While traversing the string, we can use a stack to keep track of unmatched opening parentheses `(`.
+The idea is to count how many parentheses we need to add to make the string valid.
 
-Whenever we encounter a closing parenthesis `)`:
+A valid parentheses string must satisfy two conditions:
 
-* If there is an unmatched `(` in the stack, we match them by popping it.
-* Otherwise, this `)` has no matching `(`, so we need to add an opening parenthesis. We keep track of this using `count`.
+- Every opening parenthesis `(` must have a matching closing parenthesis `)`.
+- A closing parenthesis `)` cannot appear without a matching opening parenthesis before it.
 
-After processing the entire string, any `(` remaining in the stack also needs a corresponding `)`.
+For example, consider `s = "())"`.
 
-Therefore, the answer is:
+The first `(` matches the first `)`, but the last `)` has no matching opening parenthesis. We need to add one `(` to make the string valid, resulting in `"()()"`.
 
-```text
-unmatched closing parentheses + unmatched opening parentheses
-```
+To solve this, we can use a stack to keep track of unmatched opening parentheses and a counter for unmatched closing parentheses.
 
-# Approach
+## Approach
 
-Traverse the string from left to right.
+We initialize an empty stack and a counter `count = 0`.
 
-* For `(`, push it onto the stack.
-* For `)`:
+Then, we iterate through each character in the string.
 
-  * If the stack is not empty, pop one `(` because they form a valid pair.
-  * Otherwise, increment `count` because we need to add a `(` before this `)`.
+1. **If the character is `(`:**
 
-After the loop, `len(stack)` represents the number of unmatched `(` remaining, so we need that many `)`.
+   We push it onto the stack because we need a corresponding `)` to match it later.
 
-Therefore:
+2. **If the character is `)`:**
 
-```python
-count + len(stack)
-```
+   - If the stack is not empty, there is an unmatched opening parenthesis available. We pop it from the stack because the pair is now balanced.
+   - If the stack is empty, there is no opening parenthesis available to match this `)`. Therefore, we must add an extra `(`, so we increment `count`.
 
-is the minimum number of additions required.
+3. **Calculate the final answer:**
 
-# Complexity
+   After processing the entire string, `count` tells us how many opening parentheses we need to add for unmatched closing parentheses.
 
-* Time complexity: `O(n)`
+   However, the stack may still contain unmatched opening parentheses. Each of these requires an additional closing parenthesis.
 
-* Space complexity: `O(n)`
+   Therefore, the minimum number of additions is:
 
-# Code
+   `count + len(stack)`
+
+### Example walkthrough
+
+Let's consider `s = "()))(("`.
+
+| Character | Action | Stack | Count |
+|---|---|---|---|
+| Start | Initialize | `[]` | `0` |
+| `(` | Push opening parenthesis | `['(']` | `0` |
+| `)` | Match and pop | `[]` | `0` |
+| `)` | No opening parenthesis; increment count | `[]` | `1` |
+| `)` | No opening parenthesis; increment count | `[]` | `2` |
+| `(` | Push opening parenthesis | `['(']` | `2` |
+| `(` | Push opening parenthesis | `['(', '(']` | `2` |
+
+At the end, `count = 2` and `len(stack) = 2`.
+
+So the answer is:
+
+\[
+2 + 2 = 4
+\]
+
+We need two opening parentheses to match the unmatched closing parentheses and two closing parentheses to match the remaining opening parentheses.
+
+## Complexity
+
+- **Time complexity:** \(O(n)\), where \(n\) is the length of the string. We traverse the string once, and each character requires constant-time work.
+
+- **Space complexity:** \(O(n)\) in the worst case, because the stack may contain all the opening parentheses if the string consists entirely of `(` characters.
+
+## Code
 
 ```python3
 class Solution:
     def minAddToMakeValid(self, s: str) -> int:
-
         stack = []
         count = 0
 
         for ch in s:
-
             if ch == '(':
                 stack.append(ch)
 
             else:
-                if stack:
-                    stack.pop()
+                if not stack:
+                    count += 1
 
                 else:
-                    count += 1
+                    stack.pop()
 
         return count + len(stack)
 ```
