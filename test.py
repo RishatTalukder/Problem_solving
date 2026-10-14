@@ -62,7 +62,7 @@ def draw_bars(canvas, arr, pivot_index=None):
 
 # --- Run visualization (shared) ---
 def run_visualization(algorithm):
-    arr = list(range(1, 500))  # adjust size for speed
+    arr = list(range(1, 1000))  # adjust size for speed
     random.shuffle(arr)
 
     if algorithm == "bubble":
