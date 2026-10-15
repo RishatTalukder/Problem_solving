@@ -36,3 +36,26 @@ def subsets_bitmask(n):
     return res
 
 print(subsets_bitmask(3))
+
+
+def subsets_of_array(nums: list):
+    subset = []
+
+    result = []
+
+    def search(k):
+        if k == len(nums):
+            result.append(subset.copy())
+            return 
+
+        search(k+1)
+        subset.append(nums[k])
+        search(k+1)
+        subset.pop()
+
+    search(0)
+
+    return result
+
+
+print(subsets_of_array([1,2,1]))
