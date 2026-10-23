@@ -1,6 +1,4 @@
 from math import isqrt
-from re import L
-
 
 class Solution:
     def sortableIntegers(self, nums: list[int]) -> int:
