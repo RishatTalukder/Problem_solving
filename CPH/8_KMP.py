@@ -34,3 +34,35 @@ def kmp(text: str, pattern: str) -> int:
             i += 1
 
     return -1
+
+
+def kmp(nums1, nums2):
+    n,m  = len(nums1), len(nums2)
+
+    pi = [0]*m
+    j = 0
+
+    for i in range(1, m):
+        while j > 0 and nums2[i] != nums2[j]:
+            j = pi[j-1]
+
+        if nums2[i] == nums2[j]:
+            j += 1
+
+        pi[i] = j
+
+
+    j = 0
+
+    for i in range(n):
+        while j > 0 and nums1[i] != nums2[j]:
+            j = pi[j-1]
+
+        if nums1[i] == nums2[j]:
+            j += 1
+
+        if j == m:
+            return True
+
+
+    return False
