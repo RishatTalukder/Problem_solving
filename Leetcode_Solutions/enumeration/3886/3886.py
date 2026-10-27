@@ -1,42 +1,42 @@
-from math import isqrt
-
 class Solution:
     def sortableIntegers(self, nums: list[int]) -> int:
         n = len(nums)
 
         fac = []
 
-        for x in range(1, isqrt(n)+1):
-            if n%x == 0:
-                fac.append(x)
-                if n // x != x:
-                    fac.append(n // x)
+        for i in range(1, isqrt(n)+1):
+            if n%i == 0:
+                fac.append(i)
+                
+                if n//i != i:
+                    fac.append(n // i)
 
         target = sorted(nums)
 
-        def kmp(nums1, nums2):
-            n,m  = len(nums1), len(nums2)
+        def kmp(val, pat):
+            n, m = len(val), len(pat)
 
-            pi = [0]*m
+            lps = [0]*m
+
             j = 0
 
             for i in range(1, m):
-                while j > 0 and nums2[i] != nums2[j]:
-                    j = pi[j-1]
+                while j > 0 and pat[i] != pat[j]:
+                    j = lps[j-1]
 
-                if nums2[i] == nums2[j]:
+                if pat[i] == pat[j]:
                     j += 1
 
-                pi[i] = j
+                lps[i] = j
 
 
             j = 0
 
             for i in range(n):
-                while j > 0 and nums1[i] != nums2[j]:
-                    j = pi[j-1]
+                while j > 0 and val[i] != pat[j]:
+                    j = lps[j-1]
 
-                if nums1[i] == nums2[j]:
+                if val[i] == pat[j]:
                     j += 1
 
                 if j == m:
@@ -47,22 +47,19 @@ class Solution:
 
 
         def check(nums1, nums2):
-            return kmp(nums1 + nums1, nums2)
-
+            return kmp(nums1+nums1, nums2)
 
         ans = 0
 
         for d in fac:
             for left in range(0,n,d):
-                right = left+d -1
+                right = left + d
 
-                if not check(nums[left:right+1], target[left:right+1]):
+                if not check(nums[left: right], target[left: right]):
                     break
-
 
             else:
                 ans += d
 
 
         return ans
-        
