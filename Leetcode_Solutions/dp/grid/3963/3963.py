@@ -1,11 +1,5 @@
 class Solution:
     def createGrid(self, m: int, n: int) -> list[str]:
-        if m == 1:
-            return ['.'*n]
-
-        if n == 1:
-            return ['.']*m
-
 
         first_row = ['.'*n]
 
