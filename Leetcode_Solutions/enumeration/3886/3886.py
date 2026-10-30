@@ -1,3 +1,6 @@
+from math import isqrt
+
+
 class Solution:
     def sortableIntegers(self, nums: list[int]) -> int:
         n = len(nums)
