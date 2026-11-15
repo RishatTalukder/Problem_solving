@@ -3,12 +3,12 @@ class Solution:
         MOD = 10**9 + 7
         n = len(arr)
         sums = 0
-        oddCount = 0
+        odd = 0
 
         for i in range(n):
             sums += arr[i]
             if sums % 2:
-                oddCount += 1
+                odd += 1
 
-        oddCount += (n - oddCount)*oddCount
-        return oddCount % MOD
+        odd += (n - odd)*odd
+        return odd % MOD
