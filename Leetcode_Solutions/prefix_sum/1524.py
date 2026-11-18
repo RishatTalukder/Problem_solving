@@ -16,23 +16,25 @@ class Solution:
 
 
 class Solution:
-    def numOfSubarrays(self, arr: List[int]) -> int:
+    def numOfSubarrays(self, arr: list[int]) -> int:
         MOD = 10**9 + 7
 
-        odd_prefixes = 0
-        even_prefixes = 1
+        even = 1
+        odd = 0
 
-        prefix_sum = 0
-        result = 0
+        ans = 0
+        pre = 0
 
-        for num in arr:
-            prefix_sum += num
+        for i in arr:
+            pre += i
 
-            if prefix_sum % 2:
-                result += even_prefixes
-                odd_prefixes += 1
+            if pre%2:
+                ans += even
+                odd += 1
+
             else:
-                result += odd_prefixes
-                even_prefixes += 1
+                ans += odd
+                even += 1
 
-        return result % MOD
+
+        return ans%MOD
