@@ -23,22 +23,25 @@ class Solution:
 
 class Solution:
     def minChanges(self, s: str) -> int:
-        cur = s[0]
-        strm = 0
+        MOD = 10**9 + 7
+
         ans = 0
 
+        count = 0
+        cur = s[0]
+
         for i in s:
-            if cur == i:
-                strm += 1
+            if i == cur:
+                count += 1
                 continue
 
-            if strm %2 == 0:
-                strm = 1
-
+            if count%2 == 0:
+                count = 1
+            
             else:
-                strm = 0
                 ans += 1
+                count = 0
 
             cur = i
 
-        return ans
+        return ans%MOD
